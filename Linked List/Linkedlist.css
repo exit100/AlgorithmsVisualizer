@@ -1,0 +1,157 @@
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon.icon-arrow-right {
+    content: '';
+    font-family: inherit;
+    font-weight: normal;
+}
+
+.icon.icon-arrow-right::before {
+    position: absolute;
+    left: -18px;
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
+    content: '\f061';
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(3, 28, 36) ;
+    color:mediumseagreen
+
+}
+
+body>main,
+body>.main {
+
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+
+* {
+    outline: none;
+}
+
+.app-container {
+
+    max-width: 600px;
+    margin: auto;
+    background-color: rgb(3, 28, 36);
+    padding: 30px;
+}
+
+.app-container h1 {
+    text-align: center;
+}
+
+.app-container .box_container {
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+    display: flex;
+    height: 300px;
+    width: 1000px;
+    margin: 0;
+    border: 2px solid mediumseagreen;
+}
+
+.app-container .box {
+     overflow: auto; 
+}
+
+.app-container .box .box_item {
+    border: 1px solid mediumseagreen;
+    padding: 4px 80px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.app-container .box .box_item.peeking {
+    background-color: #333;
+    color: rgb(255, 0, 0);
+}
+
+.app-container .buttons-container {
+    max-width: max-content;
+    margin: 30px auto 0 auto;
+    display: flex;
+    align-items: left;
+}
+
+.app-container .box_container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 6000px;
+    max-width: 400px;
+    position: relative;
+}
+
+.app-container .box {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 500px;
+}
+
+.app-container .box__line {
+    background: mediumseagreen;
+    flex: 1;
+    height: 2px;
+    margin-left: 4px;
+}
+
+.app-container .box .box_item {
+    padding: 8px;
+    position: relative;
+    margin-left: 20px;
+    transition: all ease 0.2s;
+}
+
+.app-container .box_container::before,
+.app-container .box_container::after {
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+.app-container .buttons-container {
+    flex-direction: column;
+}
+
+.app-container .buttons-container .btn-group {
+    margin: 10px;
+    display: flex;
+}
+
+section {
+    margin: 20px auto;
+}
+
+i{
+font-size: large;
+}
+
+.alignment{
+    display: flex;
+    justify-content: center;
+}
+.nulldiv{
+    margin-top: 20px;
+}
