@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nQueen Visualization Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="nQueen.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            N-Queens Visualizer &#9813;
+        </h1>
+    </header>
+
+
+
+    <section id="algorithm-visualizer-section">
+
+        <div id="input-section">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                
+                <p class="m-0 pe-4">Speed of the algorithm:</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1>
+            </div>
+            <label for="value-of-n">Value Of N (1-10):</label>
+            <input style="border-radius: 10px;" id="value-of-n" type="number" min="1" max="10" placeholder="N" onkeyup="validity.valid||(value='');">
+            <button id="start-visualization">Start Visualization</button>
+
+            <hr>
+        </div>
+
+
+        <div id="n-queens-visualizer-section">
+        </div>
+
+    </section>
+
+
+    
+    
+    <script src="nQueen.js"></script>
+   
+   
+
+
+</body>
+
+</html>
