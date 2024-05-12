@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Sorting.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="array-inputs" id="comp_header">
+                <input style="display: none;" id="a_size" type="range" min=20 max=150>
+                <p>Speed of the algorithm:</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1>
+                <button id="a_generate" onclick="reset()">Generate New Array!</button>
+            </div>
+
+            <div class="header_right">
+                <p class="nav-heading">Comparing Visualizer</p>
+
+
+
+                <div class="algos" id="comparebuttons">
+                    <button onclick="storeText('Bubble Sort')">Bubble</button>
+                    <button onclick="storeText('Selection Sort')">Selection</button>
+                    <button onclick="storeText('Insertion Sort')">Insertion</button>
+                    <button onclick="storeText('Merge Sort')">Merge</button>
+                    <button onclick="storeText('Quick Sort')">Quick</button>
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <section>
+        <div class="algos d-flex justify-content-center mt-4">
+            <button class="startbutton" onclick="runalgo()">START</button>
+        </div>
+
+
+    </section>
+
+    <section id="compare">
+        <div class="me-5">
+            <div class="text-center">
+                <h2 id="name1"></h2>
+            </div>
+
+            <div id="bar_graph"></div>
+        </div>
+        <div class="ms-5">
+
+            <div class="text-center">
+                <h2 id="name2"></h2>
+            </div>
+
+            <div id="sec_Array"></div>
+
+        </div>
+    </section>
+    <div id="Info_Cont2" class="d-flex justify-content-around mt-5 mb-4">
+
+        <div>
+
+            <p class="d-inline">Time Taken:</p>
+            <p id="Time1" class="d-inline"></p>
+        </div>
+        <div>
+            <p class="d-inline">Time Taken:</p>
+            <p id="Time2" class="d-inline"></p>
+        </div>
+
+    </div>
+
+
+    <script src="compare.js"></script>
+    <script src="Functions/visual.js"></script>
+
+    <script src="Functions/bubble.js"></script>
+    <script src="Functions/selection.js"></script>
+    <script src="Functions/insertion.js"></script>
+    <script src="Functions/merge.js"></script>
+    <script src="Functions/quick.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
