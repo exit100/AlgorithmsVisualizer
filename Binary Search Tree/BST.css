@@ -1,0 +1,263 @@
+:root {
+    --animation-timing: 1.5s;
+}
+
+.app-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    background-color: rgb(3, 28, 36);
+    padding: 30px;
+    color: rgb(3, 28, 36);
+
+}
+
+.headingcontainer {
+    padding-bottom: 40px;
+    border-bottom: 1px solid mediumseagreen;
+    color: mediumseagreen;
+}
+
+
+.node__element--highlight {
+    animation: nodeHighlight var(--animation-timing) ease;
+}
+
+@keyframes nodeHighlight {
+    0% {
+        background-color: #333;
+        color: white;
+    }
+
+    25% {
+        background-color: rgb(138, 245, 255);
+        color: #333;
+    }
+
+    75% {
+        background-color: #333;
+        color: white;
+    }
+
+    100% {
+        background-color: rgb(138, 245, 255);
+        color: #212529;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(3, 28, 36);
+}
+
+body>main,
+body>.main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+
+* {
+    outline: none;
+}
+
+
+.app-container h1 {
+    text-align: center;
+}
+
+.app-container div.btn-group {
+    align-items: center;
+    display: block;
+    justify-content: center;
+    margin-left: 437.5px;
+    margin-top: 24px;
+}
+
+.app-container .box_container {
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    height: 300px;
+    background-color: white;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.app-container .box {
+    overflow: auto;
+}
+
+.app-container .box .box_item {
+    border: 1px solid black;
+    padding: 4px 80px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.app-container .box .box_item.peeking {
+    background-color: #333;
+    color: white;
+}
+
+
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon.icon-arrow-right::before {
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
+    content: '\f061';
+}
+
+.icon.icon-arrow-left::before {
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
+    content: '\f060';
+}
+
+.tree {
+    --dark: #333;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree .node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    position: relative;
+}
+
+.tree .node:not(.node--root)>.node__element::before {
+    content: '';
+    height: 20px;
+    width: 1px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    margin: auto;
+}
+
+.tree .node.node--left {
+    margin-right: 20px;
+}
+
+.node.node--left::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: white;
+
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: -20px;
+
+}
+
+.node.node--right::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    left: -50%;
+    right: 0;
+    top: -20px;
+
+}
+
+.tree .node.node--right {
+    margin-left: 20px;
+}
+
+.tree .node__element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: mediumseagreen;
+    border-radius: 50%;
+    width: 78px;
+    padding: 25px 0px;
+    font-weight: 500;
+}
+
+.tree .node__bottom-line {
+
+    height: 20px;
+    width: 1px;
+    background-color: white;
+}
+
+.tree .node__element,
+.tree .node__element::before,
+.tree .node__children,
+.tree .node__bottom-line {
+    transition: all ease 0.2s;
+}
+
+.tree .node__children {
+    display: flex;
+    padding: 20px 0;
+
+}
+
+.tree .node__element:hover {
+    border-color: var(--dark);
+}
+
+.tree .node__element:hover~.node__children .node__element::before {
+    width: 2px;
+    background-color: var(--dark);
+}
+
+.tree .node__element:hover~.node__bottom-line,
+.tree .node__element:hover~.node__children .node__bottom-line {
+    width: 2px;
+    background-color: var(--dark);
+}
+
+.tree .node__element:hover~.node__children,
+.tree .node__element:hover~.node__children .node__children {
+    border-top-width: 2px;
+    border-color: var(--dark);
+}
+
+.node__children::before {
+
+
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 4px;
+}
+
+button#insertBtn:hover {
+    background-color: rgb(249, 255, 132);
+
+}
