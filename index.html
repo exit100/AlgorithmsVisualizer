@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+
+    <header id="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading">
+
+                        <h1 class="display-3 fw-bold">Algorithm Visualizer</h1>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="col-12">
+                    <div class="heading">
+                        <h2>Visualize Complicated Algorithms</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section1">
+
+        <div class="container" id="mainpageoptions">
+            <div class="row">
+                <div class="col-12">
+                    <div class="img-wrap d-flex flex-row justify-content-center">
+
+                        <div class="images">
+                            <img src="pics/pic1.png" class="img-fluid" id="pic1">
+                            <img src="pics/pic3.png" class="img-fluid" id="pic3">
+                            <img src="pics/pic2.png" class="img-fluid" id="pic2">
+                            <img src="pics/pic4.png" class="img-fluid" id="pic4">
+                        </div>
+
+                        <div class="buttons">
+                            <button type="button" class="mainpagebutton"
+                                onclick="location.href = 'Sorting viusalizer/sorting.html';">
+                                <h3> Sorting Algorithms</h3>
+                            </button>
+
+                            <div class="dropdown">
+                                <button type="button" class="mainpagebutton" data-bs-toggle="dropdown">
+                                    <h3> Backtracking</h3>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Backtracking/nQueen/nQueen.html">N-Queens</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="Backtracking/ratInMaze/ratInMaze.html">Rat In
+                                            Maze</a></li>
+                                </ul>
+                            </div>
+                            <button type="button" class="mainpagebutton"
+                                onclick="location.href = 'Binary Search Tree/BST.html';">
+                                <h3> Binary Search Tree</h3>
+                            </button>
+                            <button type="button" class="mainpagebutton"
+                                onclick="location.href = 'Linked List/Linkedlist.html';">
+                                <h3> Linked List</h3>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="credits">
+        <div>
+            <h4 class="mb-4">Data Structures and Algorithms by:</h4>
+            <p>• Arham Affan (22k-4136)</p>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
